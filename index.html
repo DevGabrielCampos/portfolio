@@ -4,57 +4,70 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portifólio website</title>
-    <link rel ="stylesheet" href="style.css">
-    <!---------------------------------------------------->
-    <link rel ="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Portfólio de Gabriel Campos</title>
+    <meta name="description" content="Portfólio de Gabriel Campos, especialista em Data Science e desenvolvimento web.">
+    <meta name="keywords" content="portfólio, data science, web development">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Adicionando a fonte -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-        <div class="hero-header">
-            <div class="wrapper">
-                <header>
-                    <div class="logo">
-                        <i class="fa-sold fa-a"></i>
-                        <div class="logo-text">Gabriel Campos</div>
+    <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <div class="logo-text">Gabriel Campos</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </div>
-                    <nav>
-                        <div class="togglbtn">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <ul class="navlinks">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Portifólio</a></li>
-                            <li><a href="#">Resume</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
-                    </nav>
-                </header>
-                <div class="container">
-                    <div class="hero-pic">
-                        <img src="img.avif" alt="profile pic">
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfólio</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                <div class="hero-pic">
+                    <img src="imgGB.jpg" alt="Foto de Gabriel Campos">
+                </div>
+                <div class="hero-text">
+                    <h5>Hi, I'm <span class="input">Data Science.</span></h5>
+                    <h1>Gabriel Campos</h1>
+                    <p>Olá! Meu nome é Gabriel Campos e tenho 17 anos. Nos últimos dois anos, mergulhei no mundo da programação, desenvolvendo habilidades em linguagens como Python e JavaScript. Meu interesse pela tecnologia vai além da codificação; busco constantemente compreender como as soluções digitais podem impactar a vida das pessoas. Além da programação, tenho explorado a neurociência, o que me permite integrar conceitos sobre comportamento humano em meus projetos.</p>
+                    <div class="btn-group">
+                        <a href="#" class="btn active">Download CV</a>
+                        <a href="#" class="btn">Contact</a>
                     </div>
-                    <div class="hero-text">
-                        <h5>Hi I'm <span class="">My specialization is Data Sciences</span></h5>
-                        <h1>Gabriel Campos</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa non sed porro fugit, suscipit delectus? Quae harum ipsum nobis ea inventore perspiciatis, expedita nisi, placeat nemo repellendus hic, qui repudiandae!
-                        
-                        </p>
-                        <div class="btn-group">
-                            <a href="#" class="btn active">Dowload CV</a>
-                            <a href="#" class="btn">Contact</a>
-                        </div>
-
-                        <div class="social">
-                            <a href="#" class=""><i class="fa-brands fa-Linkedin"></i></a>
-                            <a href="#" class=""><i class="fa-brands fa-instagram"></i></a>
-                            <a href="#" class=""><i class="fa-brands fa-dribbble"></i></a>
-                        </div>
+                    <div class="social">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" aria-label="Dribbble"><i class="fa-brands fa-dribbble"></i></a>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <script>
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("active"); 
+        });
+
+        var typed = new Typed(".input", {
+            strings: ["Developer", "Data Science", "Neuroscientist"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true // Adicionando um loop para a animação
+        });
+    </script>
 </body>
 </html>
